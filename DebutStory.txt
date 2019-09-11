@@ -1,0 +1,13 @@
+AppJdr
+
+
+
+	Application Android (voir ios dans le futur) convivial s’occupant de la gestion d’une partie de jeu de rôle. L'application servirait surtout à gérer :
+Les personnages des joueurs : Statistiques (Points de vie, Force, Agilité, ...), équipements (Armes, Armures, ...), inventaires (Potion, Nourriture, Objets divers, …)
+ Les combats : Incrémentation et décrémentation des points de vie ou de mana, gestion du gain d’expérience, …
+Les objets : Utilisation des potions, de la nourriture, armes et armures inutilisées
+Les lancés de dés : Rencontre, test pour effectuer certaines actions, …
+
+
+
+	Il sera possible de créer un personnage (nom, prénom, classe, armes et armures de départ), le faire monter de niveau grâce à l’expérience gagné en combattant, lui octroyer des objets en récompense de quêtes ou de combats, lui faire rencontrer des ennemis et les combattre. Tous cela constitue une interface enlevant le papier, destiné à la bonne conduite de la partie, qui risquait d‘être perdu ou détérioré.

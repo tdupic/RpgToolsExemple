@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="AppAdmin.View.ViewEdit"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AppAdmin.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <StackPanel>
+            <TextBlock Text="Nom :"/>
+            <TextBox Text="{Binding Nom, Mode=TwoWay}"/>
+
+
+            <Button Content="Valider" Command="{Binding CmdValide}"/>
+        </StackPanel>
+    </Grid>
+</Page>

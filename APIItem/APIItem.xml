@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>APIItem</name>
+    </assembly>
+    <members>
+        <member name="T:APIItem.Controllers.ArmesController">
+            <summary>
+            Controleur pour les armes de l'APIItem
+            </summary>
+        </member>
+        <member name="M:APIItem.Controllers.ArmesController.Get(System.Int32,System.Int32)">
+            <summary>
+            Return toutes les armes
+            </summary>
+            <param name="index">Index de début de filtrage (default : 0)</param>
+            <param name="count">Nombre max d'éléments recherché (default : 10)</param>
+            <returns>Retourne la liste des armes</returns>
+        </member>
+        <member name="M:APIItem.Controllers.ArmesController.Get(System.String)">
+            <summary>
+            Permet de rechercher une arme avec son nom
+            </summary>
+            <param name="nom">Nom de l'arme recherchée</param>
+            <returns>L'arme recherchée</returns>
+        </member>
+        <member name="M:APIItem.Controllers.ArmesController.Post(BiblioJdr.Arme)">
+            <summary>
+            Creer une nouvelle arme
+            </summary>
+            <param name="arme">L'arme à creer</param>
+            <returns>Renvoi le resultat (créé ou non)</returns>
+        </member>
+        <member name="M:APIItem.Controllers.ArmesController.Put(System.String,BiblioJdr.Arme)">
+            <summary>
+            Modifie une arme
+            </summary>
+            <param name="nom">Nom de l'arme à modifier</param>
+            <param name="arme">Nouvelle valeurs de l'arme</param>
+            <returns></returns>
+        </member>
+        <member name="M:APIItem.Controllers.ArmesController.Delete(BiblioJdr.Arme)">
+            <summary>
+            Supprime une arme
+            </summary>
+            <param name="arme">L'arme à supprimer</param>
+            <returns>Renvoi le resultat (supprimé ou non)</returns>
+        </member>
+        <member name="T:APIItem.Controllers.ArmureController">
+            <summary>
+            Controleur pour les armures de l'ApiItem
+            </summary>
+        </member>
+        <member name="M:APIItem.Controllers.ArmureController.Get(System.Int32,System.Int32)">
+            <summary>
+            Retourne la liste des armures
+            </summary>
+            <param name="index">Index de début de filtrage (default : 0)</param>
+            <param name="count">Nombre max d'élément recherché (default : 10)</param>
+            <returns>La liste des armures</returns>
+        </member>
+        <member name="M:APIItem.Controllers.ArmureController.Get(System.String)">
+            <summary>
+            Recupère une armure via son nom
+            </summary>
+            <param name="nom">Nom de l'armure recherchée</param>
+            <returns>L'armure recherchée</returns>
+        </member>
+        <member name="M:APIItem.Controllers.ArmureController.Post(BiblioJdr.Armure)">
+            <summary>
+            Ajoute une nouvelle armure
+            </summary>
+            <param name="armure">L'armure à ajouter</param>
+            <returns>Resultat de l'ajout (Ajouté ou non)</returns>
+        </member>
+        <member name="M:APIItem.Controllers.ArmureController.Put(System.String,BiblioJdr.Armure)">
+            <summary>
+            Modifie une armure
+            </summary>
+            <param name="nom">Nom de l'armure à modifier</param>
+            <param name="armure">Nouvelle valeur de l'armure</param>
+            <returns>Resultat de la modification (Modifié ou non)</returns>
+        </member>
+        <member name="M:APIItem.Controllers.ArmureController.Delete(BiblioJdr.Armure)">
+            <summary>
+            Supprime une armure
+            </summary>
+            <param name="armure">Armure à supprimer</param>
+            <returns>Resultat de la suppression (Supprimé ou non</returns>
+        </member>
+    </members>
+</doc>

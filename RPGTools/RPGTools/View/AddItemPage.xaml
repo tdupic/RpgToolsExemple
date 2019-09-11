@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RPGTools.View.AddItemPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Picker x:Name="pickerType" SelectedIndex="1" SelectedIndexChanged="PickerTypeIndexChanged" Title="Item type:" FontSize="20"/>
+            <Label Text="Nom: " FontSize="20"/>
+            <Entry x:Name="entryName" FontSize="20"/>
+            <Label x:Name="lblMtt" Text="Montant Dmg/Def: " FontSize="20" IsVisible="False"/>
+            <Entry x:Name="entryMtt" Keyboard="Numeric" FontSize="20" IsVisible="False"/>
+            <Label x:Name="lblEffet" Text="Effet: " FontSize="20" IsVisible="False"/>
+            <Entry x:Name="entryEffet" FontSize="20" IsVisible="False"/>
+            <Button Text="Ajouter item" Clicked="AddClicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

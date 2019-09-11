@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\BiblioJdr\BiblioJdr.csproj" />
+<<<<<<< HEAD
+=======
+    <ProjectReference Include="..\..\BPersistance\BPersistance.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="View\LoadPersoPage.xaml.cs">
+      <DependentUpon>LoadPersoPage.xaml</DependentUpon>
+    </Compile>
+>>>>>>> 4e9cd44f0c6e1adb35bb1ceaf05a645ffaba56d5
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="View\AddPersoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+<<<<<<< HEAD
+    <EmbeddedResource Update="View\MainMenuPage.xaml">
+=======
+    <EmbeddedResource Update="View\LoadPersoPage.xaml">
+>>>>>>> 4e9cd44f0c6e1adb35bb1ceaf05a645ffaba56d5
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

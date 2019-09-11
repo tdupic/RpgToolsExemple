@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RPGTools.View.AddSortPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Nom: " FontSize="20"/>
+            <Entry x:Name="entryName" FontSize="20"/>
+            <Label Text="Montant Dmg: " FontSize="20" IsVisible="False"/>
+            <Entry x:Name="entryMtt" Keyboard="Numeric" FontSize="20" IsVisible="False"/>
+            <Label Text="Effet: " FontSize="20" IsVisible="False"/>
+            <Entry x:Name="entryEffet" FontSize="20" IsVisible="False"/>
+            <Label Text="Cout: " FontSize="20" IsVisible="False"/>
+            <Entry x:Name="entryCout" Keyboard="Numeric" FontSize="20" IsVisible="False"/>
+            <Label Text="Cooldown: " FontSize="20" IsVisible="False"/>
+            <Entry x:Name="entryCooldown" Keyboard="Numeric" FontSize="20" IsVisible="False"/>
+            <Button Text="Ajouter sort" Clicked="AddClicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

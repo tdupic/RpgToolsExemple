@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RPGTools.View.PersonnagePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="{Binding Name, StringFormat='    Nom : {0:F0}'}" FontSize="Large" HeightRequest="50"/>
+            <Label Text="{Binding Classe, StringFormat='    Classe : {0:F0}'}" FontSize="Large" HeightRequest="50"/>
+            <Label Text="{Binding Level, StringFormat='    Level : {0:F0}'}" FontSize="Large" HeightRequest="50"/>
+            <Label Text="{Binding Xp, StringFormat='    XP : {0:F0}'}" FontSize="Large" HeightRequest="50"/>
+            <Label Text="{Binding Po, StringFormat='    Po : {0:F0}'}" FontSize="Large" HeightRequest="50"/>
+            <ListView ItemsSource="{Binding ListStats}" 
+                      HasUnevenRows="True" 
+                      SeparatorVisibility="Default"
+                      SeparatorColor="Transparent"
+                      SelectionMode="Single"
+                      SelectedItem="{Binding SelectedStat, Mode=TwoWay}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell Height="50">
+                            <FlexLayout BackgroundColor="{Binding ColorCell}">
+                                <Label Text="{Binding Name, StringFormat='     {0:F0}'}" FontSize="Large"/>
+                                <Label Text="{Binding Value, StringFormat=' :    {0:F0}'}" FontSize="Large"/>
+                            </FlexLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <FlexLayout HorizontalOptions="Center" VerticalOptions="Start">
+                <Button Text="+" Command="{Binding UpgradeStatCommand}"/>
+                <Button Text="-" Command="{Binding DowngradeStatCommand}"/>
+            </FlexLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

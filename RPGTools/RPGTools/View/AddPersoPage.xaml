@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RPGTools.View.AddPersoPage">
+    <StackLayout>
+        <Label Text="Creation d'un personnage" HorizontalOptions="CenterAndExpand" FontSize="25" Margin="0,0,0,50" TextDecorations="Underline"/>
+        <ScrollView x:Name="scrollView">
+            <Grid x:Name="gridStat" VerticalOptions="Center">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label Text="Nom : " FontSize="25" Grid.Column="0" Grid.Row="0" />
+                <Entry x:Name="txtName" Text="Ganon" Grid.Column="1" Grid.Row="0"/>
+
+                <Label Text="Classe : " FontSize="25" Grid.Column="0" Grid.Row="1" />
+                <Entry x:Name="txtClasse" Text="Zelda" Grid.Column="1" Grid.Row="1"/>
+
+                <Label Text="PV : " FontSize="25" Grid.Column="0" Grid.Row="2" />
+                <Entry Keyboard="Numeric" MaxLength="2" Placeholder="0" x:Name="txtPv" Text="0" Grid.Column="1" Grid.Row="2"/>
+
+                <Label Text="Force : " FontSize="25" Grid.Column="0" Grid.Row="3" />
+                <Entry Keyboard="Numeric" MaxLength="2" Placeholder="0" x:Name="txtForce" Text="0" Grid.Column="1" Grid.Row="3"/>
+
+                <Label Text="Agilité : " FontSize="25" Grid.Column="0" Grid.Row="4" />
+                <Entry Keyboard="Numeric" MaxLength="2" Placeholder="0" x:Name="txtAgi" Text="0" Grid.Column="1" Grid.Row="4"/>
+
+                <Label Text="Intelligence : " FontSize="25" Grid.Column="0" Grid.Row="5" />
+                <Entry Keyboard="Numeric" MaxLength="2" Placeholder="0" x:Name="txtIntel" Text="0" Grid.Column="1" Grid.Row="5"/>
+
+                <Label Text="Charisme : " FontSize="25" Grid.Column="0" Grid.Row="6" />
+                <Entry Keyboard="Numeric" MaxLength="2" Placeholder="0" x:Name="txtChar" Text="0" Grid.Column="1" Grid.Row="6"/>
+
+            </Grid>
+
+        </ScrollView>
+        <Button x:Name="addStatBtt" Text="+" Clicked="AddStats_Clicked" HorizontalOptions="Start"/>
+        <Label x:Name="errorLbl" Text="Error ! A field is empty !" IsVisible="False"/>
+        <Button Text="Valider" VerticalOptions="EndAndExpand" Clicked="Valider_Clicked"/>
+
+    </StackLayout>
+</ContentPage>

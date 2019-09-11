@@ -1,0 +1,76 @@
+{
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/items/armes",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44305
+        }
+      ],
+      "UpstreamPathTemplate": "/armes",
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ]
+    },
+    {
+      "DownstreamPathTemplate": "/items/armes/{url}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44305
+        }
+      ],
+      "UpstreamPathTemplate": "/armes/{url}",
+      "UpstreamHttpMethod": [ "Get", "Delete", "Put" ]
+    },
+    {
+      "DownstreamPathTemplate": "/items/Armure",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44305
+        }
+      ],
+      "UpstreamPathTemplate": "/armures",
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ]
+    },
+    {
+      "DownstreamPathTemplate": "/items/Armure/{url}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44305
+        }
+      ],
+      "UpstreamPathTemplate": "/armures/{url}",
+      "UpstreamHttpMethod": [ "Get", "Delete", "Put" ]
+    },
+    {
+      "DownstreamPathTemplate": "/personnages",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 50619
+        }
+      ],
+      "UpstreamPathTemplate": "/perso",
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ]
+    },
+    {
+      "DownstreamPathTemplate": "/personnages/{url}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 50619
+        }
+      ],
+      "UpstreamPathTemplate": "/perso/{url}",
+      "UpstreamHttpMethod": [ "Get", "Delete", "Put" ]
+    }
+  ]
+}

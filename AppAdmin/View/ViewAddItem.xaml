@@ -1,0 +1,44 @@
+﻿<Page
+    x:Class="AppAdmin.View.ViewAddItem"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AppAdmin.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel>
+            <CommandBar x:Name="ContentBar" Content="Players">
+                <AppBarSeparator/>
+                <AppBarButton Content="List" Command="{Binding CmdList}"/>
+                <CommandBar.SecondaryCommands>
+                    <AppBarButton Label="Disconnect" Command="{Binding CmdDisconnect}"/>
+                    <AppBarButton Label="Quit" Command="{Binding CmdQuit}"/>
+                </CommandBar.SecondaryCommands>
+            </CommandBar>
+
+
+            <TextBlock Text="Nom :"/>
+            <TextBox Text="{Binding Nom, Mode=TwoWay}" />
+
+            <TextBlock x:Name="txtBlockEffet" Text="Effet :" Visibility="Collapsed"/>
+            <TextBox x:Name="txtBoxEffet" Text="{Binding Effet, Mode=TwoWay}" Visibility="Collapsed"/>
+
+            <TextBlock x:Name="txtBlockMtt" Text="Montant de dommage/protection :" Visibility="Collapsed"/>
+            <TextBox x:Name="txtBoxMtt" Text="{Binding MttDmg, Mode=TwoWay}" Visibility="Collapsed"/>
+
+            <TextBlock Text="Type :"/>
+            <StackPanel>
+                <RadioButton x:Name="rdBttArme" Margin="5" Content="Arme" Checked="RdBttArmeChecked" IsChecked="{Binding Path=TypeItem[0], Mode=TwoWay}"/>
+                <RadioButton x:Name="rdBttArmure" Margin="5" Content="Armure" Checked="RdBttArmureChecked" IsChecked="{Binding Path=TypeItem[1], Mode=TwoWay}"/>
+                <RadioButton x:Name="rdBttPotion" Margin="5" Content="Potion" Checked="RdBttPotionChecked" IsChecked="{Binding Path=TypeItem[2], Mode=TwoWay}"/>
+                <RadioButton x:Name="rdBttNouriture" Margin="5" Content="Nouriture" Checked="RdBttNouritureChecked" IsChecked="{Binding Path=TypeItem[3], Mode=TwoWay}"/>
+            </StackPanel>
+
+            <Button Content="Add" Command="{Binding CmdAddNewItem}"/>
+
+        </StackPanel>
+    </Grid>
+</Page>

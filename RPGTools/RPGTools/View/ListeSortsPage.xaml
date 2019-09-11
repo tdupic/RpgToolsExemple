@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+             x:Class="RPGTools.View.ListeSortsPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <flv:FlowListView FlowColumnCount="3" SeparatorVisibility="None" HasUnevenRows="false"
+                              FlowItemTappedCommand="{Binding SortTappedCommand}" FlowLastTappedItem="{Binding SelectedSort}"
+                              FlowItemsSource="{Binding Spells}" RowHeight="100" FlowColumnMinWidth="100">
+
+                <flv:FlowListView.FlowColumnTemplate>
+                    <DataTemplate>
+                        <flv:FlowStackCell>
+                            <Frame BorderColor="Black">
+                                <StackLayout>
+                                    <Image Source="{Binding Icon}" MinimumWidthRequest="40" MinimumHeightRequest="40"/>
+                                    <Label HorizontalOptions="Fill" VerticalOptions="Fill" XAlign="Center" YAlign="Center" Text="{Binding Nom}"/>
+                                </StackLayout>
+                            </Frame>
+                        </flv:FlowStackCell>
+                    </DataTemplate>
+                </flv:FlowListView.FlowColumnTemplate>
+            </flv:FlowListView>
+            <Button Text="+" Command="{Binding AddSpeelCmd}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

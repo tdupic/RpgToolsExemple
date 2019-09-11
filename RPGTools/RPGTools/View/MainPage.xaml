@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RPGTools"
+             x:Class="RPGTools.View.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label Text="RPG Tools" 
+           HorizontalOptions="Center"
+               VerticalOptions="Start"
+               Margin="0, 100, 0, 0"
+               FontSize="Large"
+               FontAttributes="Bold"/>
+
+
+
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="Center">
+            <Button Clicked="OnClickNouveau" Text="Nouveau" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" FontSize="Small" WidthRequest="125" HeightRequest="50"/>
+            <Button Clicked="OnClickCharger" Text="Charger" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" FontSize="Small" WidthRequest="125" HeightRequest="50"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

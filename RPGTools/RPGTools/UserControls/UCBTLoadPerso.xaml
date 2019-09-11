@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RPGTools.UserControls.UCBTLoadPerso"
+             x:Name="root">
+<ContentView.Content>
+    <StackLayout>
+        <Label HorizontalTextAlignment="Center" FontSize="Large" x:Name="name" Text="{Binding Name, Source={x:Reference root}}"/>
+        <Label HorizontalTextAlignment="Center" FontSize="Large" x:Name="level" Text="{Binding Level, Source={x:Reference root}}"/>
+    </StackLayout>
+</ContentView.Content>
+</ContentView>

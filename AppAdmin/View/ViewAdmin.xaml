@@ -1,0 +1,38 @@
+﻿<Page
+    x:Class="AppAdmin.View.ViewAdmin"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AppAdmin.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <StackPanel>
+        <CommandBar x:Name="ContentBar" Content="Players">
+            <AppBarSeparator/>
+            <AppBarButton Content="Player" Click="BttPlayerClick"/>
+            <AppBarSeparator/>
+            <AppBarButton Content="Items" Click="BttItemsClick"/>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Label="Disconnect" Command="{Binding CmdDisconnect}"/>
+                <AppBarButton Label="Quit" Command="{Binding CmdQuit}"/>
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+        <ListView Margin="50" x:Name="ListViewVAdmin" ItemsSource="{Binding ListPlayer}">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Display}"/>
+                </StackPanel>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+        </ListView>
+        
+            <Button Content="Add new Players" Command="{Binding CmdAddPerso}"/>
+            <Button Content="Add new Items" Command="{Binding CmdAddItem}"/>
+            <Button Content="Edit" Click="BttEditClick"/>
+            <Button Content="Delete" Click="BttDeleteClick"/>
+        </StackPanel>
+    </Grid>
+</Page>
